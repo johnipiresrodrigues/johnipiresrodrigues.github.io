@@ -1,0 +1,82 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Troca de downloads</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+
+    <link rel="stylesheet" href="src/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="src/css/AdminLTE.css">
+    <link rel="stylesheet" href="src/css/Login.css">
+
+    <script src="https://apis.google.com/js/api:client.js"></script>
+  </head>
+
+  <body class="hold-transition login-page" ng-app="login">
+    <div class="login-box" ng-controller="LoginController">
+      <div class="login-logo">
+        <a href="#"><b>Troca</b>de<b>Downloads</b></a>
+        <br>
+        <span  style="color: red"><b>[ Beta ]</b></span>
+      </div><!-- /.login-logo -->
+      <div class="login-box-body">
+      
+      <div class="alert alert-danger" role="alert" ng-show="erro">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        Tente novamente em alguns minutos...
+      </div>
+
+       <img class="profile-user-img img-responsive img-circle" src="src/img/user4-128x128.jpg" alt="User profile picture">	
+
+        <div class="social-auth-links text-center">   
+  			  <div id="gSignInWrapper">
+            <google-plus-signin 
+             language="Pt-br"
+             clientid="418182505394-b9urkrbdkfk9ulajfji45888onvdkf6m">
+            </google-plus-signin>
+  			  </div>
+
+          <div>
+            <span>
+              <a href="sobre-nos.html">Sobre nós </a>
+            </span>
+          </div>
+
+          <div>
+            <span>
+              <a href="como-funciona.html">Como Funciona ? </a>
+            </span>
+          </div>
+
+          <div>
+            <span>
+              Johnipiresrodrigues@gmail.com
+            </span>
+          </div>
+
+
+        </div><!-- /.social-auth-links -->
+
+        
+
+      </div><!-- /.login-box-body -->
+    </div><!-- /.login-box -->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="src/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="src/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+ 
+     <script src="src/libs/angular/angular.min.js"></script>
+     <script src="src/libs/angular-route/angular-route.min.js"></script>
+     <script src="src/libs/angular-directive.g-signin/google-plus-signin.js"></script>
+
+     <script src="modulos/login/Modulo.js"></script>
+     <script src="modulos/login/Controller.js"></script>
+     
+  </body>
+</html>

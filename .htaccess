@@ -1,0 +1,5 @@
+# Use PHP56
+AddHandler application/x-httpd-php56 .php
+RewriteEngine on
+RewriteCond %{http_host} ^trocadedownloads.com [NC]
+RewriteRule ^(.*)$ http://www.trocadedownloads.com.br/$1 [R=301,L]

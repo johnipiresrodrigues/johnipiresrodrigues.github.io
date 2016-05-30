@@ -1,0 +1,9 @@
+angular.module('tdd', 
+[
+'ngRoute',
+'tdd.navbar',
+'tdd.cadastro',
+'tdd.listar',
+'tdd.app',
+'tdd.meusapps'
+]);

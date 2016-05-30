@@ -1,0 +1,56 @@
+		<section class="content-header">
+          <h1>
+            Cadastro de Aplicativos
+          </h1>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">	
+
+			<div class="alert" ng-class="classe" role="alert" ng-show="mostrarMensagens">
+			  <span ng-class="classeSpan" aria-hidden="true"></span>
+			  <span class="sr-only">Error:</span>
+			  {{retorno.mensagem}}
+			</div>	
+			
+			<div class="alert alert-info" role="alert">
+				Para cadastrar seu aplicativo.
+				</br>Entre no site da play store onde seu aplicativo se encontra e copie o id na url
+			</br>
+			Ex. </br>
+			<a href="https://play.google.com/store/apps/details?id=com.johnipiresrodrigues.jogodatabuada" target="_blank">
+			https://play.google.com/store/apps/details?id=<b style="color: #8E1111;">com.johnipiresrodrigues.jogodatabuada</b>
+			</a>
+			</div>
+			
+			<div class="row">		
+				<div class=" col-sm-12 col-md-8 col-lg-8">
+					<div class="input-group">
+						 <input 
+							type="text"  
+							ng-model="aplicativo.pacote" 
+							class="form-control" 
+							id="pacote" placeholder="Digite o pacote Ex: com.supercell.clashroyale">
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-primary" ng-click="buscar()">Buscar</button>
+							
+						</span>
+					</div>
+				</div>
+			</div>
+			  
+			<div class="row" ng-show="retorno.sucesso">
+			   <div class="col-sm-12 col-md-8 col-lg-8">
+				  <div class="thumbnail">
+					 <img alt="100%x200" src=" {{ aplicativo.imagem }}"> 
+					 <div class="caption">
+						<h3>{{aplicativo.nome}}</h3>
+						<p>{{aplicativo.descricao}}</p>
+						<p>
+							<a ng-click="cadastrar()" class="btn btn-primary" role="button">Cadastrar Aplicativo</a> 
+						</p>
+					 </div>
+				  </div>
+			   </div>			  
+			</div>			
+        </section>

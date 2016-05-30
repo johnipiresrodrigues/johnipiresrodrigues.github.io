@@ -1,0 +1,33 @@
+		<section class="content-header">
+          <h1>
+            Baixar este Aplicativo
+          </h1>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">	
+
+			<div class="alert" ng-class="classe" role="alert" ng-show="mostrarMensagens">
+			  <span ng-class="classeSpan" aria-hidden="true"></span>
+			  {{retorno.mensagem}}
+			</div>	
+			  
+			<div class="row" ng-show="mostrarApp">
+			   <div class="col-sm-12 col-md-8 col-lg-8">
+				  <div class="thumbnail">
+					 <img alt="100%x200" src=" {{ aplicativo.imagem }}"> 
+					 <div class="caption">
+						<h3>{{aplicativo.nome}}</h3>
+						<p>{{aplicativo.descricao}}</p>
+						<p>
+							<a  ng-click="irParaPlay()" class="btn btn-primary" role="button">Baixar na Google Play</a> 
+						</p>
+                        <p>
+                            <a  ng-click="ganharMoeda()" class="btn btn-success" role="button">Ganhar 1 Moeda</a> 
+                        </p>
+					 </div>
+				  </div>
+			   </div>			  
+			</div>
+			
+        </section>

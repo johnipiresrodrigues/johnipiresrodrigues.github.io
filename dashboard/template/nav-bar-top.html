@@ -1,0 +1,23 @@
+<a class="navbar-brand" href="/" target="_self">Troca de Downloads</a>	 
+
+<div class="navbar-custom-menu" ng-controller="NavBarController">
+	<ul class="nav navbar-nav">
+	  <!-- User Account: style can be found in dropdown.less -->
+	  <li class="dropdown user user-menu">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		  <img src=" {{profile.image}} " class="user-image" alt="User Image">
+		  <span class="hidden-xs"> {{profile.name}} </span>
+		</a>
+		<ul class="dropdown-menu">
+		  <!-- User image -->
+		  <li class="user-header">
+			<img src="{{profile.image}}" class="img-circle" alt="User Image">
+			<p>
+			  {{profile.name}}
+			  <small>Membro desde {{profile.dataCadastro | date:'dd-MM-yyyy'}}</small>
+			</p>
+		  </li>
+		</ul>
+	  </li>           
+	</ul>
+</div>		

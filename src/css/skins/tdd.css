@@ -1,0 +1,7 @@
+.thumbnail .caption {
+    text-align: center;
+    /* size: 12px; */
+    font-size: large;
+    padding: 9px;
+    color: #333;
+}

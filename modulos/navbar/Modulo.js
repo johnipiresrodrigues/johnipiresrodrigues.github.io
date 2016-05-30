@@ -1,0 +1,1 @@
+angular.module('tdd.navbar', []);

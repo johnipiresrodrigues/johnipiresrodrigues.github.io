@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Troca de Downloads</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../src/libs/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome se tirar some os botoes de abrir e fechar menus -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../src/css/AdminLTE.css">
+	<!-- Escolher apenas um tema-->
+    <link rel="stylesheet" href="../src/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../src/css/tdd.css">
+  <script type="text/javascript"> 
+    var adfly_id = 13573869; 
+    var popunder_frequency_delay = 0; 
+  </script> 
+  <script src="http://cdn.adf.ly/js/display.js"></script> 
+	
+
+  </head>
+  <body class="hold-transition skin-blue fixed sidebar-mini" ng-app="tdd">
+  
+      <!-- Site wrapper -->
+    <div class="wrapper">
+
+	<!--NAVBAR TOP [START] -->
+      <header class="main-header">
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button botoezinhos da para deixar maior-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+		  <!--NAVBAR TOP  -->
+          <div ng-include="'template/nav-bar-top.html'"></div>
+		  
+        </nav>
+      </header>
+	  <!--NAVBAR TOP [END]->
+
+    <!-- =============================================== -->
+
+      <!-- MENU ESQUERDO [START] -->
+		<aside class="main-sidebar">
+			<section class="sidebar">
+			  <ul class="sidebar-menu">
+
+          <li class="treeview active">
+  				  <a href="#">
+  					<i class="glyphicon glyphicon-phone"></i>
+  					<span>App</span>
+  				  </a>
+  				  <ul class="treeview-menu">
+  					 <li><a href="#/cadastrar" ><i class="fa" ></i>Cadastrar</a></li>
+  					 <li><a href="#/meusapps"><i class="fa"></i>Meus apps</a></li>
+  				  </ul>
+  				</li>
+
+          <li>
+              <a href="#/listar">
+                <i class="glyphicon glyphicon-usd">
+                </i> <span>Ganhar Moedas</span> <small class="label pull-right bg-green">new</small>
+              </a>
+          </li>
+
+          <li>
+              <a href="/sobre-nos.html">
+                <i class="glyphicon glyphicon-hand-right">
+                </i> <span>Sobre nós</span>
+              </a>
+          </li>
+           <li>
+              <a href="/como-funciona.html">
+                <i class="glyphicon glyphicon-question-sign">
+                </i> <span>Como Funciona</span>
+              </a>
+          </li>
+
+			  </ul>
+			</section>
+		</aside>
+	  <!-- MENU ESQUERDO [END] -->
+    <!-- =============================================== -->
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="modal" style="display: none">
+      <div class="center">
+        <img alt="" src="../../src/img/load.gif" />
+      </div>
+    </div>
+      <div class="content-wrapper" ng-view> </div><!-- /.content-wrapper -->
+
+      <div class="control-sidebar-bg"></div>
+    </div><!-- ./wrapper -->
+	
+    <script src="../src/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="../src/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../src/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="../src/plugins/fastclick/fastclick.min.js"></script>
+    <script src="../src/js/app.min.js"></script>
+    <script src="../src/js/demo.js"></script>
+
+    <script src="../src/libs/angular/angular.min.js"></script>
+    <script src="../src/libs/angular-route/angular-route.min.js"></script>
+    
+    <script src="../modulos/Modulo.js"></script>
+
+    <script src="../modulos/navbar/Modulo.js"></script>
+    <script src="../modulos/navbar/Controller.js"></script>
+
+    <script src="../modulos/cadastro/Modulo.js"></script>
+    <script src="../modulos/cadastro/Controller.js"></script>
+
+    <script src="../modulos/listar/Modulo.js"></script>
+    <script src="../modulos/listar/Controller.js"></script>
+
+    <script src="../modulos/app/Modulo.js"></script>
+    <script src="../modulos/app/Controller.js"></script>
+
+    <script src="../modulos/meusapps/Modulo.js"></script>
+    <script src="../modulos/meusapps/Controller.js"></script>
+
+    <script src="../interceptors/interceptor.js"></script>
+    <script src="../config/interceptorsConfig.js"></script>
+
+  </body>
+</html>
