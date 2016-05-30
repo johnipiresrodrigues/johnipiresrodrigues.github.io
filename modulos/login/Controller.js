@@ -13,6 +13,7 @@ angular.module('login').controller('LoginController',
     });
 
     function apiClientLoaded() {
+    	$(".modal").show();
         gapi.client.plus.people.get({userId: 'me'}).execute(function handleResponse(resp) {
         	console.log('handleResponse');
 
@@ -34,12 +35,16 @@ angular.module('login').controller('LoginController',
 
 			$http(req).then(function(resp){
 				console.log('Longin com sucesso');
+				$(".modal").hide();
+
 				resp.data.url = getUrl();
 				resp.data.token = token;
 				$window.localStorage.setItem('profile', angular.toJson(resp.data));
 				$window.location.href = 'dashboard';
 			}, function(error){
 				console.log(error);
+				$(".modal").hide();
+
 				 $scope.erro = true;
 			});
 	    });
@@ -48,6 +53,7 @@ angular.module('login').controller('LoginController',
     $scope.$on('event:google-plus-signin-failure', function (event, authResult) {
       console.log('Not signed into Google Plus.');
       $scope.erro = true;
+      $(".modal").hide();
     });
 
    /*

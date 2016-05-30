@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="src/css/AdminLTE.css">
     <link rel="stylesheet" href="src/css/Login.css">
+    <link rel="stylesheet" href="src/css/tdd.css">
 
     <script src="https://apis.google.com/js/api:client.js"></script>
   </head>
@@ -28,6 +29,12 @@
       <div class="alert alert-danger" role="alert" ng-show="erro">
         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
         Tente novamente em alguns minutos....
+      </div>
+
+      <div class="modal" style="display: none">
+        <div class="center">
+          <img alt="" src="../../src/img/load.gif" />
+        </div>
       </div>
 
        <img class="profile-user-img img-responsive img-circle" src="src/img/user4-128x128.jpg" alt="User profile picture">	
