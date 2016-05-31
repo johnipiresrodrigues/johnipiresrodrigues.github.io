@@ -93,7 +93,7 @@ angular.module('tdd.app').controller('AppController',
 		data.idApp =  $routeParams.id;
 		data.id = $scope.profile.id;
 		data.token =  $scope.profile.token;
-		data.pacote = $scope.aplicativo.pacote;
+		data.pacote = $scope.aplicativo.pacote.toLowerCase();
 		data.locale = $scope.profile.language.toLowerCase(); //Arrumar o login para pegar locale
 		
 		$(".modal").show();
