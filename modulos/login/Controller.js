@@ -79,7 +79,7 @@ angular.module('login').controller('LoginController',
 		
 		var url = '';
 		
-		switch(1) {
+		switch(2) {
 	    case 1:
 	        url = 'http://localhost:8001/';
 	        break;
