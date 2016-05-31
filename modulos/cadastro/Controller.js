@@ -72,9 +72,7 @@ angular.module('tdd.cadastro').controller('CadastroController',
 
 		var data =  {};
 		data.pacote = $scope.aplicativo.pacote;
-		data.id =  $scope.profile.id;
-		data.token = $scope.profile.token;
-		data.local = $scope.profile.language;
+		data.local = $scope.profile.user.language.toLowerCase();
 		
 		$(".modal").show();
 		var url = $scope.profile.url + 'api/detalhesaplicacao';
@@ -93,7 +91,7 @@ angular.module('tdd.cadastro').controller('CadastroController',
 			console.log("Erro : " + data );
 			if(!data){
 				data = {};
-				data.message = 'Deu merda, fuja daqui...';
+				data.message = 'Tente novamente em alguns instantes...';
 			}
 			$scope.mostrarMensagens = true;
 			$scope.classe = 'alert-danger';

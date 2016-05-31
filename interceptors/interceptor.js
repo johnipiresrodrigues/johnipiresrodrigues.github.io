@@ -5,7 +5,7 @@ angular.module('tdd.app').factory("interceptor", function( $q, $window){
 			
 			if(config.data){
 				config.data.token = perfil.token,
-				config.data.id = perfil.id
+				config.data.id = perfil.user.id
 			}
 			return config;
 		},

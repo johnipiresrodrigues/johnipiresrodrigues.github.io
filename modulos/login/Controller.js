@@ -29,7 +29,7 @@ angular.module('login').controller('LoginController',
         	
         	var req = {
 				method: 'POST',
-				url: url + 'api/buscarusuario',
+				url: url + 'api/login',
 				data: data
 			}
 
@@ -38,7 +38,7 @@ angular.module('login').controller('LoginController',
 				$(".modal").hide();
 
 				resp.data.url = getUrl();
-				resp.data.token = token;
+				//resp.data.token = token;
 				$window.localStorage.setItem('profile', angular.toJson(resp.data));
 				$window.location.href = 'dashboard';
 			}, function(error){
@@ -79,7 +79,7 @@ angular.module('login').controller('LoginController',
 		
 		var url = '';
 		
-		switch(2) {
+		switch(1) {
 	    case 1:
 	        url = 'http://localhost:8001/';
 	        break;
