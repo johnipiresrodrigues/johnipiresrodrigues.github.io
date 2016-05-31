@@ -71,7 +71,7 @@ angular.module('tdd.cadastro').controller('CadastroController',
 		var usuario = $scope.usuario;
 
 		var data =  {};
-		data.pacote = $scope.aplicativo.pacote;
+		data.pacote = $scope.aplicativo.pacote.toLowerCase();
 		data.local = $scope.profile.user.language.toLowerCase();
 		
 		$(".modal").show();
