@@ -46,6 +46,11 @@ angular.module('tdd.cadastro').controller('CadastroController',
 			$scope.classe = 'alert-success';
 			$scope.classeSpan = 'glyphicon glyphicon-ok';
 			$scope.retorno.mensagem = 'Cadastro efetuado com sucesso!, vá para Meus Apps e informe a quantidade de downloads que deseja para esse aplicativo';
+		
+			delay(function(){
+				console.log('Baixou, sera redirecionado...');
+				$window.location.href = '/meusapps';
+			}, 3000 );
 		})
 		.error(function (data, status, header, config) {
 			$(".modal").hide();
@@ -106,6 +111,14 @@ angular.module('tdd.cadastro').controller('CadastroController',
 		}
 		return descricao.substring(0,200) + '...';
 	};
+	
+	var delay = ( function() {
+	    var timer = 0;
+	    return function(callback, ms) {
+	        clearTimeout (timer);
+	        timer = setTimeout(callback, ms);
+		};
+	})();
 	
 	/**Iniciar tela **/
 	validarLogin();
