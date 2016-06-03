@@ -49,7 +49,7 @@ angular.module('tdd.cadastro').controller('CadastroController',
 		
 			delay(function(){
 				console.log('Baixou, sera redirecionado...');
-				$window.location.href = '/meusapps';
+				$window.location.href = '/#/meusapps';
 			}, 3000 );
 		})
 		.error(function (data, status, header, config) {
