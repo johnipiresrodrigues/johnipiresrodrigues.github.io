@@ -46,11 +46,7 @@ angular.module('tdd.cadastro').controller('CadastroController',
 			$scope.classe = 'alert-success';
 			$scope.classeSpan = 'glyphicon glyphicon-ok';
 			$scope.retorno.mensagem = 'Cadastro efetuado com sucesso!, vá para Meus Apps e informe a quantidade de downloads que deseja para esse aplicativo';
-		
-			delay(function(){
-				console.log('Baixou, sera redirecionado...');
-				$location.path('/meusapps');
-			}, 3000 );
+	
 		})
 		.error(function (data, status, header, config) {
 			$(".modal").hide();
