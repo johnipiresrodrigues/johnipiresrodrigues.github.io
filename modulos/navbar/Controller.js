@@ -12,7 +12,14 @@ angular.module('tdd.navbar').controller('NavBarController', function($scope, $lo
 	 		$window.location.href = '/';
 	 	}
 	 };
+	 
+	 var sair = function(){
+		 console.log('sair()');
+		 gapi.auth.setToken(null);
+		 gapi.auth.signOut();
+	 };
 
+	 $scope.sair = sair;
 	 validarLogin();
 	 load();
 });
