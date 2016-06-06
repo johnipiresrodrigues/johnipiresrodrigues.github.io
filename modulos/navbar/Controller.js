@@ -15,8 +15,6 @@ angular.module('tdd.navbar').controller('NavBarController', function($scope, $lo
 	 
 	 var sair = function(){
 		 console.log('sair()');
-		 gapi.auth.setToken(null);
-		 gapi.auth.signOut();
 		 $window.location.href = '/';
 	 };
 
