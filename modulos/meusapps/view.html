@@ -1,3 +1,8 @@
+  <div class="ng-cloak alert alert-danger" role="alert">
+Atenção, caso seu App estiver sem moedas ele não sera exibido para os outros usuários.</br>
+Insira moedas nos seus Apps	para que todos possam baixa-lo.	
+  </div>
+
 <section class="content-header">
   <h1> Meus Aplicativos </h1>
   <h5> Total de Moedas : {{moedas}}   </h5>
@@ -10,7 +15,7 @@
     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
     <span class="sr-only">Error:</span>
     {{retorno.mensagem}}
-  </div>	
+  </div>
 
   <div class="row" ng-show="true">
     <div class="col-sm-6 col-md-4 col-lg-4" ng-repeat="aplicativo in aplicativos">

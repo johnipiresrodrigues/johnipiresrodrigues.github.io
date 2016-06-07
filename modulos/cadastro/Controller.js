@@ -70,9 +70,15 @@ angular.module('tdd.cadastro').controller('CadastroController',
 		$scope.mostrarMensagens = false;
 		console.log('buscar');
 		var usuario = $scope.usuario;
+		
 
 		var data =  {};
 		data.pacote = $scope.aplicativo.pacote;
+		
+		if(data.pacote.indexOf('id=') != -1){
+			data.pacote = data.pacote.substring(data.pacote.indexOf('id=')+3);
+		}
+		
 		data.local = $scope.profile.user.language.toLowerCase();
 		
 		$(".modal").show();

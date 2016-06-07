@@ -15,14 +15,19 @@
 			
 			<div class="alert alert-info" role="alert">
 				Para cadastrar seu aplicativo.
-				</br>Entre no site da play store onde seu aplicativo se encontra e copie <b>apenas</b> o ID da url
+				</br>Entre no site da play store onde seu aplicativo se encontra e copie o link inteiro ou <b>apenas</b> o ID da url
 			</br>
-			Ex. </br>
-			<a href="https://play.google.com/store/apps/details?id=com.johnipiresrodrigues.jogodatabuada" target="_blank">
-			https://play.google.com/store/apps/details?id=<b style="color: #8E1111;">com.johnipiresrodrigues.jogodatabuada</b>
+			Ex. 
+			<b >
+				<a style="color:black" href="https://play.google.com/store/apps/details?id=com.johnipiresrodrigues.jogodatabuada" target="_blank">
+				https://play.google.com/store/apps/details?id=com.johnipiresrodrigues.jogodatabuada</a>
+			</b>
+			
+			</br>
+			ou apenas : <b style="color:black">com.johnipiresrodrigues.jogodatabuada</b>
 			</br>
 			Cuidado com letras <b>Maiúsculas</b> ou <b>minusculas.</b>
-			</a>
+			
 			</div>
 			
 			<div class="row">		
@@ -32,7 +37,7 @@
 							type="text"  
 							ng-model="aplicativo.pacote" 
 							class="form-control" 
-							id="pacote" placeholder="Digite apenas o id Ex: com.johnipiresrodrigues.jogodatabuada ">
+							id="pacote" placeholder="Digite link ou Id ">
 						<span class="input-group-btn">
 							<button type="submit" class="btn btn-primary" ng-click="buscar()">Buscar</button>
 							
