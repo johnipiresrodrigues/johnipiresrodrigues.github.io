@@ -1,5 +1,5 @@
 angular.module('tdd.app').controller('AppController', 
-	function($route, $rootScope, $scope, $location, $http, $window, $routeParams){ 
+	function($route, $rootScope, $scope, $location, $http, $window, $routeParams, $anchorScroll){ 
 	$scope.aplicativo = {};
 	$scope.retorno = {};
 	$scope.fecharRow = true;
@@ -106,6 +106,9 @@ angular.module('tdd.app').controller('AppController',
 			$scope.classe = 'alert-success';
 			$scope.classeSpan = 'glyphicon glyphicon-ok';
 			$scope.retorno.mensagem = 'Parabens Você ganhou 1 (Uma) Moeda';
+			
+			$location.hash('mensagens');
+			$anchorScroll();
 
 			delay(function(){
 				console.log('Baixou, sera redirecionado...');
@@ -125,6 +128,9 @@ angular.module('tdd.app').controller('AppController',
 			$scope.classe = 'alert-info';
 			$scope.classeSpan = 'glyphicon glyphicon-info-sign';
 			$scope.retorno.mensagem = data.message;
+			
+			$location.hash('mensagens');
+			$anchorScroll();
 			
 			delay(function(){
 				console.log('Baixou, sera redirecionado...');
