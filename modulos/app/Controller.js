@@ -9,6 +9,7 @@ angular.module('tdd.app').controller('AppController',
 	
 	
 	 var load = function(){
+		$location.hash('mensagens');
 	 	$scope.mostrarMensagens = false;
 	 	$scope.mostrarApp = false;
 	 	var anuncio = localStorage.getItem('anuncio');
@@ -107,7 +108,6 @@ angular.module('tdd.app').controller('AppController',
 			$scope.classeSpan = 'glyphicon glyphicon-ok';
 			$scope.retorno.mensagem = 'Parabens Você ganhou 1 (Uma) Moeda';
 			
-			$location.hash('mensagens');
 			$anchorScroll();
 
 			delay(function(){
@@ -129,13 +129,14 @@ angular.module('tdd.app').controller('AppController',
 			$scope.classeSpan = 'glyphicon glyphicon-info-sign';
 			$scope.retorno.mensagem = data.message;
 			
-			$location.hash('mensagens');
 			$anchorScroll();
+			
 			
 			delay(function(){
 				console.log('Baixou, sera redirecionado...');
 				$window.location.href = '/dashboard';
 			}, 4000 );
+		
 		});
 		
 	};
